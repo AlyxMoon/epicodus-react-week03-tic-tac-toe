@@ -1,3 +1,4 @@
+import GamePage from './pages/Game'
 import HomePage from './pages/Home'
 
 export interface PageRoute {
@@ -11,6 +12,12 @@ const routes: PageRoute[] = [
       '/'
     ],
     component: HomePage,
+  },
+  {
+    path: [
+      '/game',
+    ],
+    component: GamePage,
   },
 ]
 

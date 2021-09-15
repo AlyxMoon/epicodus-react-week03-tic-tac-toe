@@ -1,6 +1,9 @@
+import * as game from './modules/game'
+
+export const gameModule = game
 
 export interface ApplicationState {
-
+  game: game.State,
 }
 
 export interface AppThunkAction<TAction> {
@@ -10,4 +13,6 @@ export interface AppThunkAction<TAction> {
   ): void,
 }
 
-export const reducers = {}
+export const reducers = {
+  game: game.reducer,
+}

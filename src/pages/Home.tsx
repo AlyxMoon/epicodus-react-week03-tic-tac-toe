@@ -15,7 +15,7 @@ class HomePage extends PureComponent<Props> {
           to='/game'
         >Start a Game!</NavLink>
 
-        <p>This is ultimate tic-tac-toe. If you don't know about it, <a href='https://en.wikipedia.org/wiki/Ultimate_tic-tac-toe' target="_blank">you can find out more info here</a>.</p>
+        <p>This is ultimate tic-tac-toe. If you don't know about it, <a href='https://en.wikipedia.org/wiki/Ultimate_tic-tac-toe' target="_blank" rel="noreferrer">you can find out more info here</a>.</p>
       </>
     )
   }
