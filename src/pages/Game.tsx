@@ -1,7 +1,9 @@
 import { PureComponent } from 'react'
 import { connect, ConnectedProps } from 'react-redux'
 
-import { ApplicationState, gameModule } from '../services/store'
+import { ApplicationState } from '../services/store'
+
+import UltimateBoard from '../components/UltimateBoard'
 
 type Props = {}
   & PropsFromRedux
@@ -11,32 +13,21 @@ class HomePage extends PureComponent<Props> {
     return (
       <>
         <h1>Play!</h1>
+        
+        <p> 
+          Current Player: {this.props.activePlayer}
+        </p>
 
-        <div className='game-boards'>
-          {this.props.boards.map((board, i) => (
-            <div 
-              className='game-board'
-              key={i}
-            >
-              {board.map((cell, j) => (
-                <div 
-                  className='game-board-cell'
-                  key={j}
-                >
-                  {cell}
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
+        <UltimateBoard />
       </>
     )
   }
 }
 
 const connector = connect(
-  (state: ApplicationState) => state.game,
-  gameModule.actionCreators,
+  (state: ApplicationState) => ({
+    activePlayer: state.game.activePlayer,
+  }),
 )
 
 type PropsFromRedux = ConnectedProps<typeof connector>

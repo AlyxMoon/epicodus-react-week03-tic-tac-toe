@@ -9,7 +9,7 @@ export interface PageRoute {
 const routes: PageRoute[] = [
   {
     path: [
-      '/'
+      '/',
     ],
     component: HomePage,
   },
