@@ -41,5 +41,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "homepage": "https://alyxmoon.github.io/epicodus-react-week03-tic-tac-toe"
 }
